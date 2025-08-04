@@ -1,20 +1,19 @@
 # 论文测速使用的部分代码和工具
 
 
-## 测试YOLO系列的速度 [in progress]
-以[yolov8](https://github.com/ultralytics/ultralytics)为例
+## 测试速度 [in progress]
 
 <details open>
 <summary>1. 转onnx </summary>  
 
-执行`yolov8_onnx.py`中的`export_onnx`函数，新增代码主要涉及输出格式的转换
+执行`export_onnx`函数，新增代码主要涉及输出格式的转换
 </details>
 
 
 <details>
 <summary>2. 插入nms </summary>
 
-使用`utils.py`中的`yolo_insert_nms`函数，导出onnx模型后使用[Netron](https://netron.app/)查看结构. <img width="924" alt="image" src="https://github.com/lyuwenyu/RT-DETR/assets/17582080/cb466483-d3a3-4f23-a68d-7ab8825059c8">
+使用`utils.py`中的`insert_nms`函数，导出onnx模型后使用[Netron](https://netron.app/)查看结构. <img width="924" alt="image" src="https://github.com/lyuwenyu/RT-DETR/assets/17582080/cb466483-d3a3-4f23-a68d-7ab8825059c8">
 </details>
 
 
